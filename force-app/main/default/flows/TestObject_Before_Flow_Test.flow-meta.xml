@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignments>
+        <name>Set_Text_Field_To_Constant</name>
+        <label>Set Text Field To Constant</label>
+        <locationX>279</locationX>
+        <locationY>50</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Text_Field__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>0123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <interviewLabel>TestObject Before Flow Test {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>TestObject Before Flow Test</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Set_Text_Field_To_Constant</targetReference>
+        </connector>
+        <object>TestObject__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>
